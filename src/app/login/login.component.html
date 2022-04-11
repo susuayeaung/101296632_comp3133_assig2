@@ -1,0 +1,31 @@
+<div>
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Log In</mat-card-title>
+    </mat-card-header><br><br>
+
+    <form class="example-form" #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <label for="username">username: </label>
+          <input type="text" id="username" name="username" formControlName="username">
+      </mat-form-field><br><br>
+      
+      <mat-form-field class="example-full-width">
+          <label for="password">password: </label>
+          <input type="text" id="password" name="password" formControlName="password">
+      </mat-form-field><br><br>
+      
+      <mat-form-field class="example-full-width">
+          <button type="submit">Log in</button>
+      </mat-form-field>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>
+
+
+    
+    <!-- <p>{{ loginForm.value | json }}</p>
+    <p>{{ loginForm.invalid | json }}</p>
+    <p>{{ loginForm.submitted | json }}</p> -->

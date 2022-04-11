@@ -1,0 +1,58 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header><br><br>
+
+    <form class="example-form" #userForm="ngForm" (ngSubmit)="onSubmitData(userForm.value)">
+
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <label for="username">Userame*: </label>
+          <input #uName="ngModel" [(ngModel)]="u!.username" type="text" id="username" name="username" required>
+        </mat-form-field>
+        <span *ngIf="(uName.touched || userForm.submitted) && uName.errors!['required']">
+          **Username Required
+        </span><br><br>
+    
+        <mat-form-field class="example-full-width">
+        <label for="firstname">First Name: </label>
+        <input [(ngModel)]="u!.firstname" type="text" id="firstname" name="firstname" formControlName="firstname">
+        </mat-form-field><br><br>
+    
+        <mat-form-field class="example-full-width">
+        <label for="lastname">Last Name: </label>
+        <input [(ngModel)]="u!.lastname" type="text" id="lastname" name="lastname" formControlName="lastname">
+        </mat-form-field><br><br>
+    
+        <mat-form-field class="example-full-width">
+        <label for="password">Password: </label>
+        <input [(ngModel)]="u!.password" type="text" id="password" name="password" formControlName="password">
+        </mat-form-field><br><br>
+    
+        <mat-form-field class="example-full-width">
+        <label for="email">Email: </label>
+        <input [(ngModel)]="u!.email" type="text" id="email" name="email" formControlName="email">
+        </mat-form-field><br><br>
+    
+        <mat-form-field class="example-full-width">
+        <label for="type">Type: </label>
+        <input [(ngModel)]="u!.type" type="radio" value="user" id="type" name="type" formControlName="type"> User
+        <input [(ngModel)]="u!.type" type="radio" value="admin" id="type" name="type" formControlName="type"> Admin
+        </mat-form-field><br><br>
+    </mat-card-content>
+      <p>
+        <button type="submit">Sign Up</button>
+      </p>
+    
+    </form>
+
+    <p>Object: {{ userForm.value | json }}</p>
+    <p>isValid: {{ userForm.invalid }}</p>
+    <p>isSubmitted: {{ userForm.submitted }}</p>
+    <p>Errors: {{ userForm.errors | json }}</p>
+    <p>UserName: {{ uName.value }}</p>
+    <p>UserName Errors: {{ uName.errors | json }}</p>
+  </mat-card>
+
+</div>

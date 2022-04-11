@@ -1,0 +1,18 @@
+ <h2>{{ title }}</h2>
+ <h3>Welcome to the Building Rental Service</h3>
+
+  <div>
+    <span class="nav-tool-items">
+    <a mat-button routerLink="login" routerLinkActive="active">Log in</a><br>
+    <a mat-button mat-raised-button routerLink="signup" routerLinkActive="active">Sign Up</a>
+    </span>
+  </div> 
+  
+
+<a routerLink="/">Home</a>
+<a routerLink="/booking">Booking</a>
+<a routerLink="/listing">Listing</a>
+<a routerLink="/user/user">User - User</a>
+<a routerLink="/user">User - Admin</a>
+
+<router-outlet></router-outlet>

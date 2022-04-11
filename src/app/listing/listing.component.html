@@ -1,0 +1,32 @@
+<div class="main-card">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>
+                <strong>Listing For Rent</strong>
+            </mat-card-title>
+        </mat-card-header><br><br>
+        <mat-card-content>
+            <button mat-stroked-button
+                    color="black"
+                    class="btn-block" (click)="getListings()">Get Listings</button>
+
+            <button mat-stroked-button
+                    color="black"
+                    class="btn-block" (click)="getListingByName('btothee')">Get Listing By Name</button>
+
+            <button mat-stroked-button
+                    color="black"
+                    class="btn-block" (click)="onAddListingButtonClick()">Add New Listing</button><br><br>
+
+            <p>Listing_id: </p>
+            <p>booking_title: </p>
+            <p>description: </p>
+            <p>street: </p>
+            <p>city: </p>
+            <p>postal_code: </p>
+            <p>price: </p>
+            <p>email: </p>
+            <p>username: </p>
+        </mat-card-content>
+    </mat-card>
+</div>

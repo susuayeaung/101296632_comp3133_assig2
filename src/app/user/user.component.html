@@ -1,0 +1,22 @@
+<p>user works!</p>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmitData()">
+
+<p>
+    <select ngModel name="types">
+        <option [ngValue]="type" *ngFor="let type of types">
+            {{ type }}
+        </option>
+    </select>
+</p>
+
+<p>
+    <button type="submit">Submit</button>
+</p>
+
+</form>
+
+<p>Object: {{ userForm.value | json }}</p>
+<p>isValid: {{ userForm.invalid }}</p>
+<p>isSubmitted: {{ userForm.submitted }}</p>
+<p>Errors: {{ userForm.errors | json }}</p>
